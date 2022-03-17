@@ -83,7 +83,14 @@ div.my-next > span::after{
 }
 .carousel-element{
     display: none;
+    position: relative;
 } 
+.carousel-element > div{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+}
 .active{
     display: block;
 }

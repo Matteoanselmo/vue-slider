@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#app',
     data : {
+        elementActive : 0,
         myArray : [
             {
                 image : 'img/img1.jpg',
@@ -22,7 +23,23 @@ const app = new Vue({
                 titolo : 'Graziella',
                 paragrafo : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat id quas cupiditate possimus eos ullam beatae nemo reprehenderit? Iusto blanditiis laboriosam nulla'
             },
-            
-            ],
+        ],
     },
+    methods: {
+        previusSlide(){
+            if ( this.elementActive === 0 ){
+                this.elementActive = ( this.myArray.lenght - 1 );
+            } else {
+                this.elementActive--;
+            }
+        },
+
+        nextSlide(){
+            if ( this.elementActive === ( this.myArray.lenght - 1 ) ){
+                this.elementActive = 0;
+            } else {
+                this.elementActive++;
+            }
+        }
+    }
 });
