@@ -28,14 +28,14 @@ const app = new Vue({
     methods: {
         previusSlide(){
             if ( this.elementActive === 0 ){
-                this.elementActive = ( this.myArray.lenght - 1 );
+                this.elementActive = ( this.myArray.length - 1 );
             } else {
                 this.elementActive--;
             }
         },
 
         nextSlide(){
-            if ( this.elementActive === ( this.myArray.lenght - 1 ) ){
+            if ( this.elementActive === ( this.myArray.length - 1 ) ){
                 this.elementActive = 0;
             } else {
                 this.elementActive++;
