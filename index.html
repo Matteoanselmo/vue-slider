@@ -46,7 +46,9 @@
                                 <span class="my-prev-hook"></span>
                             </div>
                             <!-- immagini interne -->
-                            <div class="my-thumbnails-img my-brightness" v-for="(element, index) in myArray">
+                            <div class="my-thumbnails-img my-brightness" v-for="(element, index) in myArray" :class="(index === elementActive) ? 'active' : ''" @click="() => {
+                                elementActive = index;  
+                            }">
                                 <img  :src="element.image" alt="">
                             </div>
                             <!-- next -->

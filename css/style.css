@@ -86,6 +86,7 @@ div.my-next > span::after{
     position: relative;
 } 
 .carousel-element > div{
+    color: white;
     position: absolute;
     bottom: 1rem;
     right: 1rem;
@@ -95,9 +96,11 @@ div.my-next > span::after{
     display: block;
 }
 
-.my-padding-carousel{
+.my-thumbnails-img.active{
+    filter: brightness(1);
     padding: 3px;
 }
 .my-brightness{
     filter: brightness(.4);
+    
 }
